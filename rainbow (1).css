@@ -1,0 +1,74 @@
+.rainbow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.color {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.red {
+    color: red;
+    font-family: Arial, sans-serif;
+}
+
+.orange {
+    color: orange;
+    font-family: Verdana, sans-serif;
+}
+
+.yellow {
+    color: yellow;
+    font-family: Impact, sans-serif;
+}
+
+.green {
+    color: green;
+    font-family: Courier, monospace;
+}
+
+.blue {
+    color: blue;
+    font-family: Georgia, serif;
+}
+
+.indigo {
+    color: indigo;
+    font-family: Times New Roman, serif;
+}
+
+.violet {
+    color: violet;
+    font-family: Comic Sans MS, cursive;
+}
+
+.color::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.color:hover::before {
+    opacity: 1;
+}
